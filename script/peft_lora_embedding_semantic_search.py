@@ -408,7 +408,7 @@ def main():
             active_dataloader = accelerator.skip_first_batches(train_dataloader, resume_step)
         else:
             active_dataloader = train_dataloader
-        //print(active_dataloader)
+        print(active_dataloader)
         
         for step, batch in enumerate(active_dataloader):
             with accelerator.accumulate(model):
@@ -442,7 +442,7 @@ def main():
                 break
 
         model.eval()
-        for step, batch in enumerate(eval_dataloader):
+        for _, batch in enumerate(eval_dataloader):
             with torch.no_grad():
                 q1_embs = model(**{k.replace("question1_", ""): v for k, v in batch.items() if "question1_" in k})
                 q2_embs = model(**{k.replace("question2_", ""): v for k, v in batch.items() if "question2_" in k})

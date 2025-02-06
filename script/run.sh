@@ -1,9 +1,11 @@
-~/.local/bin/accelerate launch  \
+# ~/.local/bin/accelerate launch  \
+accelerate launch  \
+--num_processes=1  \
 --mixed_precision="fp16"  \
 peft_lora_embedding_semantic_search.py   \
 --dataset_name="../data/quora_dq_train.csv"   \
 --max_length=70   \
---model_name_or_path="intfloat/e5-small-v2"   \
+--model_name_or_path="intfloat/multilingual-e5-large-instruct"   \
 --per_device_train_batch_size=64   \
 --per_device_eval_batch_size=128   \
 --learning_rate=5e-4   \
@@ -16,3 +18,6 @@ peft_lora_embedding_semantic_search.py   \
 --report_to="wandb"   \
 --use_peft \
 --checkpointing_steps "epoch"
+
+
+# --model_name_or_path="intfloat/e5-small-v2"   \

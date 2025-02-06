@@ -9,3 +9,4 @@ tqdm
 huggingface_hub
 wandb
 pytest
+scikit-learn
