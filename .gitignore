@@ -178,3 +178,5 @@ pyrightconfig.json
 # Specific to this project https://github.com/aulukelvin/LoRA_E5
 model/
 script/wandb/
+nohup*.out
+quora_dq_*.json

@@ -1,0 +1,21 @@
+[project]
+name = "lora-e5"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate==1.0",
+    "datasets",
+    "evaluate==0.4",
+    "hnswlib==0.8",
+    "huggingface-hub",
+    "pandas",
+    "peft==0.13",
+    "pytest==8.3",
+    "scikit-learn==1.6",
+    "tinydb",
+    "tqdm",
+    "transformers",
+    "wandb==0.19",
+]
